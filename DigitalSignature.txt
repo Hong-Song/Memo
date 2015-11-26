@@ -1,0 +1,10 @@
+cd\Program Files\Microsoft SDKs\Windows\v6.0A\Bin
+
+makecert -n "CN=OMCS International" -r -sv c:\tmp\omcskey.pvk  c:\tmp\omcsCert.cer
+cert2spc.exe c:\tmp\omcscert.cer c:\tmp\omcscert.spc  
+pvk2pfx -pvk c:\tmp\omcskey.pvk -pi omcs -spc c:\tmp\omcscert.spc -pfx c:\tmp\omcscert.pfx -po omcs  
+
+
+signTool sign /f c:\tmp\omcscert.pfx /p omcs /v c:\tmp\PMORA.EXE  
+
+
