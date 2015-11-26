@@ -1,0 +1,34 @@
+initialize
+$ git init
+
+
+add files
+$ git add FileName  
+$ git add .    //add all changes files
+
+
+commit
+$ git commit -m "comments"
+
+
+connect to remote repository
+$ git remote add origin git@github.com:hong-song/pmo.git
+
+pull
+$ git pull origin master
+
+push
+for the first time
+$ git push -u origin master
+then
+$ git push origin master
+
+
+Configuring a remote for a fork
+$ git remote -v
+$ git remote add upstream https://github.com/NexusGlobal/pmo
+
+Syncing a fork
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
